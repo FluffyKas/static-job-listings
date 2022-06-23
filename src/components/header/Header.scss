@@ -1,0 +1,14 @@
+@use "../../assets/styles/globals.scss" as *;
+
+header {
+  background: url("../../assets/images/bg-header-mobile.svg"), $clr-primary-cyan;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20vh;
+
+  @media(min-width: 60rem) {
+    background: url("../../assets/images/bg-header-desktop.svg"), $clr-primary-cyan;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
