@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+// Colors
+
+// Primary colors
+
+$clr-primary-cyan: hsl(180, 29%, 50%);
+
+// Neutral colors
+
+$clr-neutral-grey-cyan-150: hsl(180, 52%, 96%);
+$clr-neutral-grey-cyan-100: hsl(180, 31%, 95%);
+$clr-neutral-grey-cyan-400: hsl(180, 8%, 52%);
+$clr-neutral-grey-cyan-900: hsl(180, 14%, 20%);
+
+
+body {
+  background: $clr-neutral-grey-cyan-100;
+  font-family: 'League Spartan', sans-serif;
+}
