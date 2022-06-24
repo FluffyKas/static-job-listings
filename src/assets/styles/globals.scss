@@ -8,11 +8,21 @@ $clr-primary-cyan: hsl(180, 29%, 50%);
 
 // Neutral colors
 
-$clr-neutral-grey-cyan-150: hsl(180, 52%, 96%);
 $clr-neutral-grey-cyan-100: hsl(180, 31%, 95%);
+$clr-neutral-grey-cyan-150: hsl(180, 52%, 96%);
 $clr-neutral-grey-cyan-400: hsl(180, 8%, 52%);
 $clr-neutral-grey-cyan-900: hsl(180, 14%, 20%);
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 
 body {
   background: $clr-neutral-grey-cyan-100;
