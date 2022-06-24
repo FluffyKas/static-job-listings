@@ -1,0 +1,85 @@
+@use "../../assets/styles/globals.scss" as *;
+
+.listing {
+  background: white;
+  border-left: 5px solid $clr-primary-cyan;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px 0px hsla(180, 29%, 50%, .3);
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.listing-header {
+  display: flex;
+  gap: .5rem;
+  padding-block-end: .5rem;
+}
+
+.company-logo {
+  position: absolute;
+  max-width: 50px;
+  top: -1.5rem;
+}
+
+.company-name {
+  color: $clr-primary-cyan;
+  font-weight: 700;
+  padding-inline-end: 1rem;
+}
+
+.highlight-label {
+  border-radius: 25px;
+  color: white;
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .175rem .6rem;
+  text-transform: uppercase;
+}
+
+.new-label {
+  background: $clr-primary-cyan;
+}
+
+.featured-label {
+  background: $clr-neutral-grey-cyan-900;
+}
+
+.label-container {
+  all: unset;
+}
+
+.listing-title {
+  font-size: 1rem;
+  color: $clr-neutral-grey-cyan-900;
+  margin-block-end: .5rem;
+}
+
+.listing-details {
+  color: $clr-neutral-grey-cyan-400;
+  display: flex;
+  gap: 1.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $clr-neutral-grey-cyan-400;
+  opacity: .5;
+  margin-block: 1rem;
+}
+
+.label-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.job-label {
+  all: unset;
+  background: $clr-neutral-grey-cyan-150;
+  border-radius: 5px;
+  color: $clr-primary-cyan;
+  cursor: pointer;
+  font-weight: 700;
+  padding: .25rem .65rem;
+}
