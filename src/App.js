@@ -1,12 +1,15 @@
 import { Header, Listings } from "./components";
+import { FilterProvider } from "./context";
 
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Listings />
-    </div>
+    <FilterProvider>
+      <div className="App">
+        <Header />
+        <Listings />
+      </div>
+    </FilterProvider>
   );
 }
 
