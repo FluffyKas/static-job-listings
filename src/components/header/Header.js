@@ -4,7 +4,15 @@ import removeIcon from "../../assets/images/icon-remove.svg";
 
 export const Header = () => {
 
-  const { filters } = useFilters();
+  const { filters, setFilters } = useFilters();
+
+  const removeFilter = (e) => {
+    //need a solution here
+  }
+
+  const emptyFilters = () => {
+    setFilters([]);
+  }
 
   return (
     <header>
@@ -13,11 +21,11 @@ export const Header = () => {
           {filters.map(filter => (
             <div className="filter">
               <span>{filter}</span>
-              <button><img src={removeIcon} alt="Remove filter" /></button>
+              <button onClick={removeFilter}><img src={removeIcon} alt="Remove filter" /></button>
             </div>
           ))}
         </div>
-        <button className="clear-btn">Clear</button>
+        <button className="clear-btn" onClick={emptyFilters}>Clear</button>
       </div>}
     </header>
   );
