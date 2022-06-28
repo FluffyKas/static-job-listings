@@ -1,6 +1,20 @@
 import "./SingeListing.scss";
+import { useFilters } from "../../context";
 
 export const SingleListing = ({ listing }) => {
+
+  const { filters, setFilters } = useFilters();
+
+  const selectFilter = (e) => {
+    if (filters.includes(e.target.innerText)) {
+      return filters;
+    } else {
+      setFilters([...filters, e.target.innerText])
+    }
+    console.log(filters)
+  }
+
+
   return (
     <article className="listing">
       <img className="company-logo" src={listing.logo} alt={listing.company} />
@@ -20,13 +34,13 @@ export const SingleListing = ({ listing }) => {
       <hr />
       <fieldset className="label-container">
         <legend className="sr-only">Position details:</legend>
-        <button className="job-label">{listing.role}</button>
-        <button className="job-label">{listing.level}</button>
+        <button className="job-label" onClick={selectFilter}>{listing.role}</button>
+        <button className="job-label" onClick={selectFilter}>{listing.level}</button>
         {listing.languages.map(language => (
-          <button className="job-label">{language}</button>
+          <button className="job-label" onClick={selectFilter}>{language}</button>
         ))}
         {listing.tools.map(tool => (
-          <button className="job-label">{tool}</button>
+          <button className="job-label" onClick={selectFilter}>{tool}</button>
         ))}
       </fieldset>
     </article>
